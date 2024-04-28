@@ -226,6 +226,8 @@ b{
   font-weight: 600;
   font-size: 32px;
   letter-spacing: 0.6px;
+  color: green; /* Change color to green */
+  font-family: 'Consolas', 'Courier New', Courier, monospace; /* Use Consolas font for code-like appearance */
 }
 
 .illustration{
