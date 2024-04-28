@@ -12,8 +12,8 @@ const Home = () => {
       <div className='HomePage'>
 
         <div className='HomeText'>
-          <h1>Hi There!</h1>
-          <h1>I'M <b>DEVANSH SAHNI</b></h1>
+          <h1>Hello World!</h1>
+          <h1>I'm <b>Pritom Paul</b></h1>
           <Typed/>   
         </div>
 
@@ -29,14 +29,11 @@ const Home = () => {
         <div className='AboutText'>
           <h1 className='AboutTextHeading'>Brief <b>introduction</b></h1>
           <p>
-            I love the process of changing a raw idea into a website or a product 
-            that impacts lives. 
-            I want to do work that challenges me as a developer & work that I can 
-            be proud of.<br /><br />
-            I am fluent in <b>C++</b> and know a bit of <b>Python</b> and am working on a few 
-            projects in the <b>MERN</b> stack.<br />
-            I plan to learn <b>Next.js</b>, <b>Three.js</b> and<b> Typescript</b> in the near future. <br /><br />
-            Also, I love <b>coffee</b> <CiCoffeeCup style={{scale:"1.5", rotate:"15deg"}}/>   
+              Welcome to my Profile! I'm a passionate software developer at AlterSense Limited, dedicated to transforming raw ideas into impactful products bringing them to fruition. I thrive on challenges that push me to grow and deliver work I'm proud of.
+              <br /><br />
+              Proficient in Python and Java, I'm currently immersed in several projects aimed at improving lives. My pursuit of innovation spans various areas of software development, allowing me to continually broaden my knowledge and expertise.
+              <br /><br />
+              Beyond coding, I find inspiration in video games, envisioning ways to infuse creativity from this realm into my future software development endeavors. Join me on this journey of innovation and creativity!
           </p>
         </div>
         <Tilt>
