@@ -207,6 +207,7 @@ b{
 /* HOME PAGE */
 
 .HomePage{
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   min-height: 80vh;
@@ -527,17 +528,27 @@ footer h4{
 }
 .social-links {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Align links vertically */
   align-items: center;
 }
 
 .social-links a {
-  color: #ffffff; /* Set color */
-  font-size: 24px; /* Set font size */
-  margin: 0 10px; /* Add some margin between icons */
-  transition: color 0.3s ease; /* Add smooth color transition */
+  color: #ffffff;
+  font-size: 40px;
+  margin: 20px 0; /* Add margin between icons */
+  transition: color 0.3s ease, box-shadow 0.3s ease; /* Adding box-shadow transition */
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Initial box-shadow */
 }
 
 .social-links a:hover {
-  color: #9067C6; /* Change color on hover */
+  color: #9067C6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box-shadow on hover */
+
+}
+
+.SocialMediaLinks {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
 }
