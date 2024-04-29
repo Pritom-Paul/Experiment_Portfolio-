@@ -305,7 +305,7 @@ b{
 }
 
 .Avatar{
-  width: 280px;
+  width: 380px;
 }
 
 @media(max-width:900px){
@@ -516,4 +516,12 @@ footer h4{
   footer{
     height: 110px;
   }
+}
+
+.AboutText {
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.AboutText:hover {
+  transform: scale(1.05); /* Scale up on hover */
 }
