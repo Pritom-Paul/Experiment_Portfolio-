@@ -12,7 +12,7 @@ const About = () => {
           <h1 className='AboutTextHeading' >Get to <b>know</b> me!</h1>
           <p>
               Hi, my name is <b>Pritom Paul</b> and I am from Dhaka, Bangladesh.
-              I'm a <b>software developer</b> and I graduated with a degree in <b>Computer Science and Engineering</b> from Brac University in Summer 2023. <br/><br/>
+              I'm a <b>Software Developer</b> and I graduated with a degree in <b>Computer Science and Engineering</b> from Brac University in Summer 2023. <br/><br/>
               I thrive on diving deep into the realms of code, constantly expanding my skill set while exploring new horizons. My interests even extend to the fascinating world of <b>Robotic Process Automation (RPA)</b>, where I've found innovative ways to optimize processes and boost efficiency.<br/><br/>
               Passionate about making a meaningful impact in the <b>tech industry</b>, I enjoy the challenge of pushing boundaries and crafting solutions that truly make a difference.<br/><br/>
               Every day presents an opportunity for growth and learning, and I'm always excited about the next big challenge that awaits.<br/>
@@ -27,6 +27,7 @@ const About = () => {
               className="illustration" 
               animationData={Coder} 
               loop={true} 
+              style={{ width: '240px', height: '240px' }} // Adjust the width and height as needed
             />
           </Tilt>
         </div>
@@ -35,20 +36,20 @@ const About = () => {
       
       <h1 className='SkillsHeading'>Professional Skillset</h1>
       <div className='skills'>
-        
+        <Skills skill='Python' />
         <Skills skill='React' />
-        <Skills skill='Node' />
-        <Skills skill='Express' />
-        <Skills skill='MongoDb' />
+        <Skills skill='Javascript' />
         <Skills skill='Git' />
         <Skills skill='Github' />
-        <Skills skill='Javascript' />
-        <Skills skill='C++' />
-        <Skills skill='Postman' />
-        <Skills skill='Figma' />
+        <Skills skill='MySql' />
+        <Skills skill='Selenium' />
+        <Skills skill='PostgreSql' />
+        <Skills skill='Pandas' />
+        <Skills skill='CSS' />
+        <Skills skill='PHP'/>
         <Skills skill='Vercel' />
         <Skills skill='Npm' />
-        <Skills skill='Bootstrap'/>
+        
         
       </div>
     </>

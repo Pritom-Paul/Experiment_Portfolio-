@@ -355,7 +355,8 @@ b{
 }
 .SkillBox:hover{
   transform: scale(1.2);
-  box-shadow: 0 2px 8px 0 #431f47;
+  box-shadow: 0 2px 25px 0 #d27fdb;
+  /* background-color: #f7f7f7; */
 }
 
 .SkillsHeading{
@@ -542,13 +543,14 @@ footer h4{
 
 .social-links a:hover {
   color: #9067C6;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box-shadow on hover */
+  transform: scale(1.2); /* Scale up on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 
 }
 
 .SocialMediaLinks {
   position: absolute;
   top: 50%;
-  left: 10px;
+  left: 20px;
   transform: translateY(-50%);
 }
