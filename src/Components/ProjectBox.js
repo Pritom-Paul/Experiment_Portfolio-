@@ -1,17 +1,17 @@
 import React from 'react';
 import {FaGithub} from "react-icons/fa";
-import {CgFileDocument} from "react-icons/cg";
+
 
 
 const  ProjectBox = ({projectPhoto, projectName}) => {
   const desc = {
-    // TindogDesc : "This website is a landing page of Tinder but for dogs. It is a responsive website which was made to understand Bootstrap. I also learned how to host my project on Github and then how to deploy that project using Github pages.",
-    // TindogGithub : "https://github.com/DevanshSahni/tindog",
-    // TindogWebsite : "https://devanshsahni.github.io/tindog/",
+    PortfolioDesc : "Crafted with passion and purpose, this website is my digital masterpiece—an immersive showcase of my journey, passions, and achievements. Dive into my world and discover the essence of who I am, from my portfolio to my personal insights, all in one place.",
+    PortfolioGithub : "https://github.com/Pritom-Paul/Experiment_Portfolio-",
+    
 
-    // RogFreeDesc : "A website that shows you over seven specialized yoga postures for specific diseases or health problems. This was a group project made in a team of two for a 36-hour-long online hackathon named Hackodisha 2.0.",
-    // RogFreeGithub : "https://github.com/DevanshSahni/Rog-Free",
-    // RogFreeWebsite : "https://devanshsahni.github.io/Rog-Free/",
+    WebotDesc : "Experience innovation with my Webot-powered bot: equipped with sensors, it navigates autonomously, effortlessly avoiding obstacles. Witness the future of robotics in action.",
+    WebotGithub : "https://github.com/Pritom-Paul/Webot",
+    
 
     // NewsletterDesc:"A newsletter signup site made using Mailchimp API where the signups can be monitored from the MailChimp account. This project was made to understand API integration, environment variables and vercel deployment.",
     // NewsletterGithub:"",
@@ -42,7 +42,6 @@ const  ProjectBox = ({projectPhoto, projectName}) => {
             </a>
 
             <a href={desc[projectName + 'Website']} target='_blank' rel="noreferrer">
-              {/* <button className='projectbtn'><CgFileDocument/> Demo</button> */}
             </a>
         </div>
     </div>

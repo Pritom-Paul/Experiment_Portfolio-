@@ -1,23 +1,25 @@
 /* Contact Form Container */
 .contact-form-container {
-  border: 1px solid #e0e0e0;
+  
   padding: 20px;
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  background-color: #431f47; /* Preserved the dark purple background */
+  background-color: #22224556; /* Dark purple background */
   border-radius: 8px;
   margin: auto; /* Center the container */
+  float: right; /* Float container to the right */
+  margin-right: 150px; /* Add margin for spacing */
 }
 
 /* Contact Header */
 .contact-header {
-  font-size: 35px;
-  font-weight: 600; /* Match the font-weight style */
-  color: whitesmoke;
+  font-size: 2rem; /* Responsive font size */
+  font-weight: 600;
+  color: #d8b1b1; /* Light text color */
   text-align: center;
-  margin-bottom: 20px; /* Add space below the header */
-  letter-spacing: 0.6px; /* Added letter spacing for consistency */
+  margin-bottom: 20px;
+  letter-spacing: 0.6px;
 }
 
 /* Contact Form */
@@ -25,54 +27,55 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
 }
 
 /* Form Group */
 .form-group {
   width: 80%;
-  margin-bottom: 20px; /* Increased bottom margin */
+  margin-bottom: 1.5rem; /* Adjusted bottom margin */
 }
 
 /* Form Label */
 .form-label {
   display: block;
-  margin-bottom: 8px; /* Space between label and input */
-  color: #f8f8f8; /* Lighter text color for visibility */
-  font-weight: 600; /* Added consistency with font weight */
-  font-size: 20px; /* Increased font size for readability */
-  letter-spacing: 0.6px; /* Added letter spacing */
+  margin-bottom: 0.5rem; /* Space between label and input */
+  color: #c2c1c2; /* Light text color */
+  font-weight: 600;
+  font-size: 1rem; /* Responsive font size */
+  letter-spacing: 0.6px;
 }
 
 /* Form Control */
 .form-control {
-  width: 100%; /* Ensures input fields fill the form group */
-  padding: 12px; /* Increased padding for better touch */
-  font-size: 16px; /* Larger font size */
-  border: 1px solid #ccc;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem; /* Responsive font size */
+  color: #e0e0e0;
+  /* border: 1px solid #ccc; */
   border-radius: 8px;
-  background-color: #fff; /* Background color for input fields */
+  background-color: #6b6b79;
   resize: vertical;
 }
 
 .form-control:focus {
-  outline: none;  /* Removes the default focus outline */
-  border: 2px solid #9067C6; /* Changes the border color on focus */
-  box-shadow: 0 0 20px #dc82ee; /* Adds a blue glow around the field */
+  outline: none;
+  border: 2px solid #9067C6; /* Highlight color on focus */
+  box-shadow: 0 0 20px #9067C6; /* Soft glow effect */
 }
 
 /* Send Button */
 .send-button {
-  background-color: #1a73e8;
+  background-color: #824cc9;
   color: white;
   border: none;
-  padding: 12px 24px; /* More padding for better usability */
+  padding: 0.75rem 1.5rem; /* Adjusted padding */
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  transition: background-color 0.3s;
+  font-size: 1rem; /* Responsive font size */
 }
 
 .send-button:hover {
-  background-color: #135abf; /* Darker blue on hover */
+  background-color: #5e4084;
 }
