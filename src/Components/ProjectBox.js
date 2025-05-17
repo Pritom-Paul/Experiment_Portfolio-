@@ -5,12 +5,15 @@ import {FaGithub} from "react-icons/fa";
 
 const  ProjectBox = ({projectPhoto, projectName}) => {
   const desc = {
-    PortfolioDesc : "Crafted with passion and purpose, this website is my digital masterpiece—an immersive showcase of my journey, passions, and achievements. Dive into my world and discover the essence of who I am, from my portfolio to my personal insights, all in one place.",
+    PortfolioDesc : "My digital masterpiece, showcasing my journey, passions, and achievements. Dive into my world and discover more about me.",
     PortfolioGithub : "https://github.com/Pritom-Paul/Experiment_Portfolio-",
     
 
-    WebotDesc : "Experience innovation with my Webot-powered bot: equipped with sensors, it navigates autonomously, effortlessly avoiding obstacles. Witness the future of robotics in action.",
+    WebotDesc : "Autonomous navigation with sensors, avoiding obstacles. Witness the future of robotics.",
     WebotGithub : "https://github.com/Pritom-Paul/Webot",
+
+    GamestoreDesc : "GameStore where users can browse games, add to cart and checkout. Supports two types of users: Admins and Regular Users, each with their own dashboard functionalities.",
+    GamestoreGithub : "https://github.com/Pritom-Paul/Ultimatum-Gamestore",
     
 
     // NewsletterDesc:"A newsletter signup site made using Mailchimp API where the signups can be monitored from the MailChimp account. This project was made to understand API integration, environment variables and vercel deployment.",

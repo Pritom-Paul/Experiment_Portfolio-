@@ -26,8 +26,7 @@ const ContactMe = () => {
     setIsSubmitting(true);
     
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Form submitted:', formData);
+      // FormSubmit will handle the actual submission
       setSubmitSuccess(true);
       setFormData({
         name: '',
@@ -56,7 +55,18 @@ const ContactMe = () => {
             to be part of your vision.
           </p>
 
-          <form onSubmit={handleSubmit} className='contact-form'>
+          <form 
+            onSubmit={handleSubmit} 
+            className='contact-form'
+            action="https://formsubmit.co/pritompaul98official@gmail.com" 
+            method="POST"
+          >
+            {/* Add this hidden input to prevent spam */}
+            <input type="text" name="_honey" style={{display: 'none'}} />
+            
+            {/* Add redirect after submission (optional)
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" /> */}
+            
             {submitSuccess && (
               <div className="success-message">
                 <p>Thank you for your message! I'll get back to you soon.</p>
