@@ -1,65 +1,145 @@
 import React, { useState } from 'react';
 import './ContactMe.css';
 import '../index.css';
+import { FiMail, FiSend, FiMessageSquare, FiUser } from 'react-icons/fi';
 
 const ContactMe = () => {
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('Submitting form with:', { email, subject, message });
-    alert('Thank you for your message!');
-    setEmail('');
-    setSubject('');
-    setMessage('');
+    setIsSubmitting(true);
+    
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      console.log('Form submitted:', formData);
+      setSubmitSuccess(true);
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+      
+      setTimeout(() => setSubmitSuccess(false), 5000);
+    } catch (error) {
+      console.error('Submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div className='AboutPage'>
-      <div className='contact-form-container'>
-        <h1 className='contact-header'>Get in Touch</h1>
-        <form onSubmit={handleSubmit} className='contact-form'>
-          <div className='form-group'>
-            <label htmlFor='email' className='form-label'>Email Address</label>
-            <input
-              type='email'
-              id='email'
-              className='form-control'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
+    <>
+      <div className='AboutPage'>
+        <div className='AboutText'>
+          <h1 className='AboutTextHeading'>Get in <b>touch</b>!</h1>
+          <p>
+            Interested in working together or have questions about my work? 
+            Feel free to reach out using the form or through my other contact channels.
+            I'm always open to discussing new projects, creative ideas, or opportunities
+            to be part of your vision.
+          </p>
 
-          <div className='form-group'>
-            <label htmlFor='subject' className='form-label'>Subject</label>
-            <input
-              type='text'
-              id='subject'
-              className='form-control'
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              required
-            />
-          </div>
+          <form onSubmit={handleSubmit} className='contact-form'>
+            {submitSuccess && (
+              <div className="success-message">
+                <p>Thank you for your message! I'll get back to you soon.</p>
+              </div>
+            )}
 
-          <div className='form-group'>
-            <label htmlFor='message' className='form-label'>Message</label>
-            <textarea
-              id='message'
-              className='form-control'
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-            />
-          </div>
+            <div className="form-group">
+              <label htmlFor="name" className="form-label">
+                <FiUser className="input-icon" /> Your Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="form-control"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                placeholder="John Doe"
+              />
+            </div>
 
-          <button type='submit' className='send-button'>Send Message</button>
-        </form>
+            <div className="form-group">
+              <label htmlFor="email" className="form-label">
+                <FiMail className="input-icon" /> Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="form-control"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="your.email@example.com"
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="subject" className="form-label">
+                <FiMessageSquare className="input-icon" /> Subject
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                className="form-control"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                placeholder="Regarding a potential project"
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message" className="form-label">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                className="form-control"
+                rows="6"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                placeholder="Hello, I'd like to discuss..."
+              />
+            </div>
+
+            <button 
+              type="submit" 
+              className="send-button"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : (
+                <>
+                  <FiSend className="button-icon" /> Send Message
+                </>
+              )}
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

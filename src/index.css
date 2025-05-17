@@ -525,7 +525,7 @@ footer h4{
 }
 
 .AboutText:hover {
-  transform: scale(1.05); /* Scale up on hover */
+  transform: scale(1); /* Scale up on hover */
 }
 .social-links {
   display: flex;
